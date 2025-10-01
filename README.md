@@ -25,14 +25,17 @@
 **Q3b:** What are the usernames of each group member on that platform?  
 **Q3c:** What is your group’s expected response time to messages?  
 
-**Example:**  
-*We will use Discord for communication*  
+
+*We will use Discord for daily communication and quick questions. For live collaborations, we’ll use Zoom for screen sharing.*  
 
 *Usernames:*  
-*Justin - ghostmechanic*  
-*Claudia - ninth.py*  
-*Mauricio - itsperi*  
-*Our expected response time will be within 12 hours.*  
+*Ashika - ashikashekar_51077*  
+*Inemesit - inemesit*  
+*Riya - hollywoodg*  
+*Joy - eowyn8170*  
+
+
+*Our expected response time will be within 2 hours during weekdays (9am-9pm) and within 4 hours on weekends. For urgent issues blocking progress, we'll use Discord's @everyone feature and expect response within 30 minutes during agreed working hours.*  
 
 ---
 
@@ -42,9 +45,9 @@
 **Q4b:** How will your group handle situations when a member is not contributing enough?  
 
 **Example:**  
-*If there is a disagreement on direction, we will resolve it with a unanimous vote.*  
-*If team members do not pull their weight, the team will politely remind them of their duties.*  
-*If they continue to not pull their weight, then they will get another warning and a chance to start being more productive.*  
+*If there is a disagreement on technical direction or feature implementation, we will first discuss pros and cons as a group. If consensus can't be reached, we'll document both options and consult our TA during office hours for guidance. For design decisions, we'll use majority vote (3 out of 4). Joy, as project lead, will have tie-breaking authority only after thorough discussion.*  
+
+*If team members are not meeting agreed-upon deadlines or contributing their share, we will first check in privately to see if they're facing obstacles (personal issues, technical blockers, workload from other classes). We'll offer help and adjust tasks if needed. If lack of contribution continues after this check-in, the group will have a meeting to formally remind them of their commitments and set clear expectations for the next sprint. If the pattern persists after two warnings, we'll document the situation and bring it to the TA's attention.*  
 
 ---
 
@@ -53,13 +56,19 @@
 **Q5:** How will your group divide your role in the Group Project?  
 
 **Example:**  
-*Mauricio - Backend, Justin - Project Lead, Claudia - Frontend.*  
+*Ashika - Frontend, Inemesit - Backend, Riya - Backend, Joy - Project Lead & Full Stack*  
+
+*Note: All members will participate in testing, documentation, and presentation preparation.*
+
+
+
 
 ---
 
 # Tech Stacks
 
-**Q6:** Which tech stacks will your group use? (Django + React or Flask + React)
+**Q6:** Which tech stacks will your group use? 
+*Flask + React*
 
 ---
 # Full Stack Group Project Track  
