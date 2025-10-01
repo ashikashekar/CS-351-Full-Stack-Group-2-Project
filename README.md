@@ -1,21 +1,48 @@
 # Logistics  
 
 **Q1:** At what time in the week would your group be available to meet online?  
-**Example:**  
-*We are available to meet online on weekends from 12pm-8pm (12-2pm Saturday + Sunday), as well as from 4pm-6pm on Fridays.*  
-*Our weekly meeting will be Thursday 11am-12pm.*  
+
+*We are available to meet online on Mondays and Wednesdays from 11am-12pm. We will also hold extended working sessions on Sundays from 5pm-6pm for collaborative coding and debugging. Our primary weekly meeting will be Mondays at 11am for planning and status updates.*
 
 ---
 
 # Timeline: Weekly Meeting Goals  
 
 **Q2:** What is your goals that your group want to achieve in each weekly meeting?  
-**Example:**  
-*Prior to 3/13: Weekly Meeting we will plan out some preliminary info/idea for the project itself ahead of the scheduled meeting like which data source/API and data structures we will use in our backend. We will browse [the given list of public APIs for inspiration](https://github.com/public-apis/public-apis).*  
 
-*During week of 3/25: Work on the project rough draft itself to make a functioning project with data input, data structure usage, and processing into output on the frontend.*  
+*Week 6 (09/28-10/04)*
+*Complete GitHub repository setup with proper branch structure*
+*Divide initial tasks: frontend components, backend API design, database schema*
+*Set up development environments for all team members*
 
-*Prior to 4/17: Meet together weekly to target project weakpoints/bugs and possibly visit office hours to get guidance if the progress feels weak.*  
+
+*Weeks 7 (10/05-10/11)*
+*Complete basic authentication system and user model*
+*Build core dashboard UI components in React*
+*Implement browser extension basic tracking functionality*
+*Set up Flask backend with initial API endpoints*
+
+
+*Weeks 8 (10/12-10/18)*
+*Integrate extension with backend for usage tracking*
+*Build data visualization components using Recharts*
+*Implement reflection prompt system*
+*Connect frontend and backend*
+
+
+*Weeks 9-10 (10/19-11/01)*
+*Complete all core features*
+*Add extra credit components (third-party APIs, deployment)*
+
+
+*Weeks 11 (11/02-11/08)*
+*Polish UI/UX*
+
+
+*Weeks 13-14*
+*Prepare presentation materials*
+*Final testing and deployment*
+
 
 ---
 
@@ -67,8 +94,11 @@
 
 # Track 1: Tackling Generative AI Consequences
 **Problem 1:** 
+*Generative AI assistants make it easy to get instant answers, but constant reliance can weaken problem solving and critical thinking. Many students and professionals aren’t aware of how much they depend on AI tools day by day, and this invisible overuse may lead to cognitive offloading and skill decline over time.*
 
 **Solution 1:** 
+
+*AI Usage Reflection Platform is a web dashboard that helps users visualize and understand their AI usage patterns. A lightweight browser extension tracks when someone interacts with AI tools (ChatGPT, Claude, Copilot, etc.), while the React frontend displays daily and weekly statistics with clear visualizations. A Flask backend stores usage data with full user privacy controls and provides non-judgmental reflection prompts encouraging users to think about their patterns. The platform focuses on transparency and self-awareness, not prescribing limits or shaming users.*
 
 ---
 
