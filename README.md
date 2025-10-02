@@ -150,22 +150,39 @@ We are going with Track 1: AI Overuse Awareness. This is the project we are goin
 
 **Q1: What database are you using for your project (SQLite, PostgreSQL, noSQL, MongoDB,...), and why do you choose it?**
 
+PostgreSQL. It handles growing datasets better than SQLite. Our data also has clear relationships that benefit from a relational model
+
 **Q2: How will database be helpful to your project? How will you design your database to support your application features?**
+
+PostgreSQL will store all usage events, user accounts, and generated AI insight. We’ll have tables for users, events (each time they interact with AI tools), and insights (optional summaries generated with OpenAI). The schema will let us query usage by time, tool type, or frequency to power the dashboard graphs. Indexes will be added on user_id and timestamps for fast filtering and time series charts. Relationships between tables will ensure data integrity when deleting or updating user records.
 
 ## Third-Party API Integration
 
 **Q3: Which third-party API(s) will you integrate into your project? What data will you pull from the API(s), and how will you use it in your application?**
 
+We plan to integrate two third-party APIs. The primary integration is the OpenAI API, which we'll use to generate personalized reflection summaries based on usage patterns. When a user clicks the "Generate Insights" button on their dashboard, we'll send aggregated statistics to OpenAI's completion endpoint, receiving back natural language insights like "Your usage peaks during late night coding sessions, suggesting AI might be compensating for fatigue" or "You rarely use AI for brainstorming compared to direct problem-solving, which might indicate missed opportunities for creative exploration." This feature is completely opt-in and users can delete generated insights at any time. Our secondary integration is Mailjet for transactional emails, specifically weekly reflection prompt digests. These emails will include basic usage statistics and gentle questions encouraging self-reflection, delivered on a schedule the user controls.
+
 **Q4: Does your API key has limitations such as rate limits or downtime? How are you going to deal with that?**
+
+Yes. OpenAI uses dynamic rate limits that vary by account and model. New free accounts typically start with very low limits (about 3 requests per minute and ~200 requests per day), but exact limits are shown in the OpenAI dashboard and can increase with usage or paid tiers. We’ll monitor our limits in the dashboard and use a Redis-based queue with exponential backoff to handle bursts and retries if we hit rate limits.
+ Mailjet API provides 6,000 emails per month with a daily cap of 200 emails, which should comfortably accommodate our UIC-focused user base. We'll batch weekly digest emails during off-peak hours and implement a queue that defers non-urgent emails if we approach the daily threshold.
 
 ## Authentication and Security
 
 **Q5: What authentication method will you use (e.g., username/password, OAuth, JWT)?**
 
+We'll use JWT (JSON Web Tokens) with email/password login. Users register with an email and password, we hash the password with bcrypt, and issue a JWT that expires in 24 hours.
+
 **Q6: How will you store and protect sensitive user data (e.g., passwords, tokens)?**
+
+Passwords are hashed with bcrypt before storage, we never store them in plaintext. The JWT secret is stored in environment variables.
 
 ## Deployment
 
 **Q7: Where will you deploy your project (e.g., Heroku, AWS, Render)? How will you manage environment variables and secrets during deployment?**
 
+We will deploy on Render. All sensitive keys (JWT secret, database URL, OpenAI API key, Mailjet API key) will be stored as environment variables in Render’s built-in secret manager, never hardcoded in the codebase or committed to Git.
+
 **Q8: How will you ensure your deployment is reliable and easy to update?**
+
+We will use GitHub Actions for CI/CD so every merge to the main branch triggers an automatic build and redeployment on Render. Before each push, we’ll run automated tests locally.
