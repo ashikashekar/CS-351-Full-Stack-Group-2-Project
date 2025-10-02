@@ -127,13 +127,14 @@ This leaves many feeling isolated and struggling alone with tasks that peers cou
 
 # Track 3: Creative Coding and Cultural Expression
 
-**Idea - Story - Inspiration 4:**
+**Idea - Story - Inspiration 4: Immigrant and diaspora families in Chicago carry recipes that represent more than just food, they're cultural artifacts documenting migration journeys, adaptations to new environments, and family resilience. When elder family members pass away, these recipes and the stories behind them often disappear. Children of immigrants grow up eating traditional dishes but don't learn the cultural context, ingredient substitutions made due to availability, or the memories tied to specific meals.Traditional recipe apps focus on cooking instructions but strip away the cultural narrative. Family recipes get texted in fragmented WhatsApp messages, scribbled on index cards that get lost, or exist only in the cook's memory. Second and third-generation Americans lose connection to their heritage because the stories behind the food aren't preserved alongside the ingredients.This is particularly acute in Chicago, one of America's most diverse cities, where neighborhoods contain concentrated populations from specific regions (Polish in Jefferson Park, Mexican in Pilsen, South Asian in West Ridge, South Asian/Indian, Pakistani in Devon, Italian - little village, African American/Soul food - Bronzeville, Greek/Mediterranean - Greektown etc.). These communities hold incredible culinary knowledge that isn't being systematically documented.**
 
-**Implementation 4:**
+**Implementation 4: Migration Memory Cookbook is a multimedia storytelling platform where immigrant and diaspora families document recipes alongside migration stories, cultural context, and adaptations made across generations. Each recipe becomes a narrative artifact connecting past and present.**
 
-**Idea - Story - Inspiration 5:**
+**Idea - Story - Inspiration 5: Chicago neighborhoods each tell distinct stories through their street names, but most residents don't know the history behind them. Why is there a street named after Ida B. Wells? Who was Pulaski? These names represent important historical figures, cultural milestones, and neighborhood transformations, but the knowledge exists only in historical archives or local historians' memories. Newcomers to Chicago navigate streets daily without understanding the cultural heritage encoded in the names. This creates a disconnect between residents and the rich history beneath their feet, particularly in immigrant and minority communities whose contributions are commemorated in street names but forgotten in popular memory.**
 
-**Implementation 5:**
+
+**Implementation 5: Chicago Street Stories is an interactive map based storytelling platform that brings street name histories to life. Users explore an interactive map of Chicago where clicking any street reveals its naming origin, historical significance, and connection to neighborhood culture. Each street profile includes the biography of the person it's named after (with photos and key accomplishments), the historical event or cultural significance it commemorates, how the name has changed over time (many streets were renamed), and stories from residents about what that street means to their community.**
 
 
 # Idea Finalization
