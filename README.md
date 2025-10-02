@@ -74,13 +74,17 @@
 
 # Track 2: Technology for Public Goods 
 
-**Problem 2:**
+**Problem 2:** UIC students often live away from family and established support networks. They run into small but urgent problems like moving dorm furniture, carrying groceries, jumping a car battery, getting quick help with a tough homework concept but existing options don’t fit. Formal volunteer platforms expect long-term commitments and background checks. Social media posts get lost in feeds, and apps like Nextdoor skew toward older homeowners, not students.
 
-**Solution 2:** 
+This leaves many feeling isolated and struggling alone with tasks that peers could easily help with in minutes. New students, international students, and those with mobility limitations are hit hardest. Traditional mutual aid networks require knowing the right group chats or friends. there’s no dedicated UIC space for quick, safe, one-time help.
 
-**Problem 3:** 
 
-**Solution 3:**  
+**Solution 2:** Mutual Aid is a closed, UIC-verified platform where students can post and claim small, time-bounded tasks. It uses a lightweight credit system to encourage reciprocity while keeping the spirit of mutual aid: help should flow easily in a trusted community. By limiting membership to those with a valid @uic.edu email, the platform builds density and safety among peers.
+
+**Problem 3:**  UIC students possess valuable skills but lack platforms to exchange them. A computer science student who needs guitar lessons can't easily connect with a music student who needs coding help. Students either pay for services they can't afford or go without assistance. While informal skill trading happens through friend groups, there's no system to match students across campus based on complementary needs, resulting in missed opportunities for learning and collaboration.
+
+**Solution 3:** SkillSwap is a UIC-exclusive platform where students list skills they offer and skills they need, then get matched with complementary partners. A smart algorithm suggests exchanges (e.g., "Alex offers Python tutoring and needs Spanish practice" matches with "Maria offers Spanish tutoring and needs coding help"). Students send proposals, negotiate terms, and coordinate through built-in messaging. The platform requires UIC email verification for safety, includes post-exchange ratings, and supports both in-person campus meetings and virtual sessions. This makes tutoring and skill-building accessible regardless of financial means while connecting students across majors and backgrounds.
+
 
 # Track 3: Creative Coding and Cultural Expression
 
@@ -96,6 +100,9 @@
 # Idea Finalization
 
 **From 5 project ideas you have above, please choose one of the project that you are going with for the rest of the semester. Explain why you are going with that project**
+
+We are going with Track 1: AI Overuse Awareness. This is the project we are going with because we think it would be interesting that in a time where there is so much reliance on AI among college students, it would be enlightening to see just how much people are dependent on openAI.
+
 
 # Extra Credit (Only do this if you are done with Idea Finalization)
 
