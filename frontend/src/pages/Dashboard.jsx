@@ -32,6 +32,21 @@ function Dashboard() {
       if (response.ok) {
         const data = await response.json();
         setStats(data);
+        
+        // ===== Send token to Chrome Extension =====
+        if (window.chrome && window.chrome.runtime) {
+          try {
+            window.chrome.runtime.sendMessage(
+              'akajdephmbfeignblnhhfbpcmjkfeene', // your extension ID
+              { action: 'setAuthToken', token: token },
+              (response) => {
+                if (response) console.log('Token sent to extension');
+              }
+            );
+          } catch (err) {
+            console.log('Extension not available');
+          }
+        }
       } else {
         localStorage.removeItem('authToken');
         navigate('/');
@@ -88,7 +103,8 @@ function Dashboard() {
             {Math.floor(stats.duration_today / 60)} min
           </p>
           <p className="stat-label">
-            {Math.floor(stats.duration_today / 3600)} hours {Math.floor((stats.duration_today % 3600) / 60)} minutes
+            {Math.floor(stats.duration_today / 3600)} hours{' '}
+            {Math.floor((stats.duration_today % 3600) / 60)} minutes
           </p>
         </div>
       </div>
@@ -106,7 +122,9 @@ function Dashboard() {
       {stats.queries_today >= 80 && (
         <div className="cooldown-message">
           <span className="cooldown-icon">⏸️</span>
-          <p><strong>Cooldown Recommended:</strong> Try stepping away for 10 minutes to avoid overreliance.</p>
+          <p>
+            <strong>Cooldown Recommended:</strong> Try stepping away for 10 minutes to avoid overreliance.
+          </p>
         </div>
       )}
     </div>
