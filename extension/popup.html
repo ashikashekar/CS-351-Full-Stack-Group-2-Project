@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      width: 300px;
+      padding: 20px;
+      font-family: Arial, sans-serif;
+      margin: 0;
+    }
+    h2 {
+      margin: 0 0 15px 0;
+      color: #333;
+      font-size: 18px;
+    }
+    .status {
+      padding: 10px;
+      border-radius: 5px;
+      margin-bottom: 15px;
+      font-size: 14px;
+    }
+    .active {
+      background: #d1fae5;
+      color: #065f46;
+    }
+    .inactive {
+      background: #fee2e2;
+      color: #991b1b;
+    }
+    .stats {
+      background: #f3f4f6;
+      padding: 10px;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+    .stats p {
+      margin: 5px 0;
+      font-size: 13px;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      background: #667eea;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 14px;
+      margin-bottom: 5px;
+    }
+    button:hover {
+      background: #5568d3;
+    }
+    #loginBtn {
+      background: #22c55e;
+    }
+    #loginBtn:hover {
+      background: #16a34a;
+    }
+  </style>
+</head>
+<body>
+  <h2>AI Usage Tracker</h2>
+  <div id="status" class="status inactive">Not logged in</div>
+  <div class="stats">
+    <p><strong>Today's queries:</strong> <span id="queries">0</span></p>
+    <p><strong>Pending sync:</strong> <span id="pending">0</span></p>
+  </div>
+  <button id="loginBtn" style="display: none;">Login to Sync</button>
+  <button id="openDashboard">Open Dashboard</button>
+  <script src="popup.js"></script>
+</body>
+</html>
