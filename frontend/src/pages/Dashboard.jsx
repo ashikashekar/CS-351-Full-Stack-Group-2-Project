@@ -12,6 +12,14 @@ function Dashboard() {
 
   useEffect(() => {
     fetchDashboard();
+    
+    // added: auto-refresh every 5 seconds
+    const interval = setInterval(() => {
+      fetchDashboard();
+    }, 5000);
+    
+    // added: cleanup on unmount
+    return () => clearInterval(interval);
   }, []);
 
   const fetchDashboard = async () => {
