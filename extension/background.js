@@ -1,38 +1,64 @@
-// Listen for auth token from web app
+// Background service worker
+// Handles auth token, background sync, and direct session uploads
+
+// 1. save auth token sent from web app
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
-  if (request.action === 'setAuthToken') {
+  // store JWT
+  if (request.action === "setAuthToken") {
     chrome.storage.local.set({ authToken: request.token }, () => {
-      console.log('Auth token saved');
+      console.log("[AI Tracker] Auth token saved");
       sendResponse({ success: true });
     });
     return true;
   }
+
+  // handle session POST requests from content.js (Option 1)
+  if (request.type === "SEND_SESSION") {
+    console.log("[AI Tracker] Background received session data:", request.payload);
+
+    fetch("http://localhost:5000/api/sessions", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${request.token}`
+      },
+      body: JSON.stringify(request.payload)
+    })
+      .then((res) => {
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        console.log("[AI Tracker] Background sent successfully");
+      })
+      .catch((err) => console.error("[AI Tracker] Background send failed:", err));
+  }
 });
 
-// Sync stored sessions periodically
+// 2. periodically sync any unsent sessions (failsafe)
 setInterval(async () => {
-  chrome.storage.local.get(['sessions', 'authToken'], async (result) => {
+  chrome.storage.local.get(["sessions", "authToken"], async (result) => {
     if (result.sessions && result.sessions.length > 0 && result.authToken) {
+      const remaining = [];
+
       for (const session of result.sessions) {
         try {
-          const response = await fetch('http://localhost:5000/api/sessions', {
-            method: 'POST',
+          const response = await fetch("http://localhost:5000/api/sessions", {
+            method: "POST",
             headers: {
-              'Content-Type': 'application/json',
-              'Authorization': `Bearer ${result.authToken}`
+              "Content-Type": "application/json",
+              Authorization: `Bearer ${result.authToken}`
             },
             body: JSON.stringify(session)
           });
-          
-          if (response.ok) {
-            // Remove synced session
-            const newSessions = result.sessions.filter(s => s !== session);
-            chrome.storage.local.set({ sessions: newSessions });
-          }
+
+          if (!response.ok) throw new Error(`HTTP ${response.status}`);
+          console.log("[AI Tracker] Synced stored session:", session.tool);
         } catch (err) {
-          console.log('Sync failed:', err);
+          console.warn("[AI Tracker] Sync failed, keeping session:", err);
+          remaining.push(session);
         }
       }
+
+      // update storage with any unsynced sessions
+      chrome.storage.local.set({ sessions: remaining });
     }
   });
-}, 60000); // Every minute
+}, 5000); // every 5 seconds
