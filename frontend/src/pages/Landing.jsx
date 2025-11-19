@@ -34,7 +34,7 @@ function Landing() {
               <div className="feature-item">
                 <span className="feature-icon">📊</span>
                 <h3>Track Your Usage</h3>
-                <p>Monitor how often you interact with AI tools like ChatGPT, Claude, and Gemini</p>
+                <p>Monitor how often you interact with AI tools like ChatGPT, Perplexity, and Gemini</p>
               </div>
               
               <div className="feature-item">
@@ -67,7 +67,7 @@ function Landing() {
               <h2>What We Collect</h2>
               <ul>
                 <li><strong>Timestamps:</strong> When you use AI tools</li>
-                <li><strong>Tool Names:</strong> Which AI service you used (ChatGPT, Claude, etc.)</li>
+                <li><strong>Tool Names:</strong> Which AI service you used (ChatGPT, Gemini, etc.)</li>
                 <li><strong>Query Counts:</strong> How many prompts you sent</li>
                 <li><strong>Session Duration:</strong> How long you spent on each tool</li>
               </ul>
@@ -83,9 +83,7 @@ function Landing() {
               <h2>Your Privacy Rights</h2>
               <ul>
                 <li>Your data is stored securely and never shared</li>
-                <li>You can delete all your data at any time</li>
                 <li>You have full access to view all collected data</li>
-                <li>Data is automatically deleted after 90 days (configurable)</li>
               </ul>
 
               <div className="consent-checkbox">
