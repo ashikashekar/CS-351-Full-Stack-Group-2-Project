@@ -12,8 +12,7 @@ Team Members: Ashika, Inemesit, Joy, Riya
 
 ## Demo Video
 
-[https://github.com/user-attachments/assets/YOUR-VIDEO-ID-HERE](https://github.com/user-attachments/assets/YOUR-VIDEO-ID-HERE)
-(Replace this link with your uploaded demo video URL)
+https://drive.google.com/file/d/1KG8YkXwO4o84nQDjxqUTY0aqYyhIf4EN/view?usp=sharing 
 
 ---
 
